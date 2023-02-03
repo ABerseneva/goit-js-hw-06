@@ -13,25 +13,19 @@ const images = [
   },
 ];
 
-// const li = images.map(
-//   ({ url, alt }) => 
-//   `<li><img class = "image03" src = "${url}" alt = "${alt}"></li>`
-// );
-// console.log(li);
-// const gallery = document.querySelector('.gallery');
-// console.log(gallery);
-
-// gallery.insertAdjacentHTML("afterbegin", li)
-
 const galleryKey = document.querySelector('.gallery');
 
 const inputArray = [];
 
 images.forEach((item) => {
-  const li = `<li><img class = "image03" src = "${item.url}" alt = "${item.alt}"></li>`;
+  const li = `<li><img class = "image" src = "${item.url}" alt = "${item.alt}" width = 500></li>`;
   inputArray.push(li);
 });
 
 galleryKey.insertAdjacentHTML('beforeEnd', inputArray.join(''));
 
 galleryKey.style.display = 'flex';
+
+galleryKey.style.listStyle = "none";
+
+galleryKey.style.flexDirection = "column";
