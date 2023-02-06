@@ -5,7 +5,7 @@ const text = document.querySelector('#text');
 text.style.fontSize = "16";
 
 input.addEventListener("input", (event) => {
-  text.style.fontSize = input.value + "px";
+  text.style.fontSize = `${input.value}px`;
 });
 
 
